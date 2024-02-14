@@ -8,7 +8,7 @@ function randomCalc(operator, operand1, operand2) {
   switch (operator) {
     case "+":
       return operand1 + operand2;
-    case "-":
+    case "ё-":
       return operand1 - operand2;
     case "*":
       return operand1 * operand2;
