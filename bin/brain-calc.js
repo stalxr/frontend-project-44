@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars, , import/extensions
-import readlineSynk from "readline-sync";
+import readlineSync from "readline-sync";
 // eslint-disable-next-line import/extensions
 import { userName, name } from "../src/cli.js";
 
@@ -31,7 +31,7 @@ function calculator() {
     const question = `Question: ${operand1} ${operator} ${operand2}`;
     const correctAnswer = randomCalc(operator, operand1, operand2);
     const userAnswer = parseInt(
-      readlineSynk.question(`${question}\nYour answer: `).toLowerCase(),
+      readlineSync.question(`${question}\nYour answer: `).toLowerCase(),
       10,
     );
 

@@ -1,4 +1,4 @@
-import readlineSynk from 'readline-sync';
+import readlineSync from 'readline-sync';
 // eslint-disable-next-line import/extensions
 import { name, userName } from '../src/cli.js';
 
@@ -19,7 +19,7 @@ function playGame() {
       // eslint-disable-next-line no-shadow
       console.log(`Question: ${number}`);
       // eslint-disable-next-line no-undef
-      const answer = readlineSynk.question('Your answer: ').toLowerCase();
+      const answer = readlineSync.question('Your answer: ').toLowerCase();
 
       if ((isEven(number) && answer === 'yes') || (!isEven(number) && answer === 'no')) {
         console.log('Correct!');

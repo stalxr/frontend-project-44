@@ -1,4 +1,4 @@
-import readlineSynk from "readline-sync";
+import readlineSync from "readline-sync";
 // eslint-disable-next-line import/extensions
 import { userName, name } from '../src/cli.js';
 
@@ -27,7 +27,7 @@ function playGameGcd() {
 
     console.log(`Question: ${a} ${b}`);
     // eslint-disable-next-line no-alert
-    const userAnswer = parseInt(readlineSynk.question('Your answer: ').toLowerCase(), 10);
+    const userAnswer = parseInt(readlineSync.question('Your answer: ').toLowerCase(), 10);
 
     if (userAnswer === gcd(a, b)) {
       console.log("Correct!");
