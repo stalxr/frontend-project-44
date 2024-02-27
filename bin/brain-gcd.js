@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import readlineSync from "readline-sync";
-// eslint-disable-next-line import/extensions
 import { userName, name } from '../src/cli.js';
 
 function gcd(a, b) {

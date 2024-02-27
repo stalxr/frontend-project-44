@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import readlineSync from "readline-sync";
-// eslint-disable-next-line import/extensions
 import { userName, name } from "../src/cli.js";
 import randomNumber from "../src/utils/randomnum.js"
 
@@ -13,7 +12,7 @@ function generateArithmeticProgression() {
   const progression = [];
 
   // eslint-disable-next-line no-plusplus
-  for (let i = 1; i < length; i++) {
+  for (let i = 1; i <= length; i++) {
     progression.push(firstNumber)
     firstNumber += step
   }
