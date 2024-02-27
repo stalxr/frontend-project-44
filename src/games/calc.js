@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars, , import/extensions
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 // eslint-disable-next-line import/extensions, import/no-unresolved
-import { userName, name } from "../cli.js";
+import { userName, name } from '../cli.js';
 
 function randomCalc(operator, operand1, operand2) {
   // eslint-disable-next-line default-case

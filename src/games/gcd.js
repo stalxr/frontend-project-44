@@ -32,7 +32,7 @@ const playGameGcd = () => {
     const userAnswer = parseInt(readlineSync.question('Your answer: ').toLowerCase(), 10);
 
     if (userAnswer === gcd(a, b)) {
-      console.log("Correct!");
+      console.log('Correct!');
       // eslint-disable-next-line no-plusplus
       correctAnswers++;
     } else {
