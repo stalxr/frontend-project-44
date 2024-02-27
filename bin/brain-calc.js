@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // eslint-disable-next-line no-unused-vars, , import/extensions
 import readlineSync from "readline-sync";
 // eslint-disable-next-line import/extensions
@@ -8,7 +9,7 @@ function randomCalc(operator, operand1, operand2) {
   switch (operator) {
     case "+":
       return operand1 + operand2;
-    case "ё-":
+    case "-":
       return operand1 - operand2;
     case "*":
       return operand1 * operand2;
@@ -30,10 +31,8 @@ function calculator() {
     const operator = operators[Math.floor(Math.random() * operators.length)];
     const question = `Question: ${operand1} ${operator} ${operand2}`;
     const correctAnswer = randomCalc(operator, operand1, operand2);
-    const userAnswer = parseInt(
-      readlineSync.question(`${question}\nYour answer: `).toLowerCase(),
-      10,
-    );
+    let userAnswer = readlineSync.question(`${question}\nYour answer: `);
+    userAnswer = parseInt(userAnswer, 10) || userAnswer
 
     // eslint-disable-next-line radix
     if (userAnswer === correctAnswer) {

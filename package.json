@@ -5,7 +5,6 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "frontend-project-44": "bin/brain-games.js",
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
     "brain-calc": "bin/brain-calc.js",
@@ -20,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "ci": "^2.3.0",
+    "link": "^2.1.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
