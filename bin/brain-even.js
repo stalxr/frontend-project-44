@@ -1,11 +1,9 @@
 #!/usr/bin/env node
+/* eslint-disable import/extensions */
 import readlineSync from 'readline-sync';
 // eslint-disable-next-line import/extensions
 import { name, userName } from '../src/cli.js';
-
-function randomNumber() {
-  return Math.floor(Math.random() * 100) + 1;
-}
+import randomNumber from '../src/utils/randomnum.js';
 
 const isEven = (number) => number % 2 === 0;
 
@@ -27,7 +25,7 @@ function playGame() {
         // eslint-disable-next-line no-plusplus
         correctAnswers++;
       } else {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEven(number) ? 'no' : 'yes'}'.`);
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEven(number) ? 'yes' : 'no'}'.`);
         // eslint-disable-next-line no-restricted-globals
         console.log(`Let's try again, ${name}!`);
         return;
@@ -39,4 +37,3 @@ function playGame() {
   }
 }
 playGame();
-export default playGame;
