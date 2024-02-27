@@ -6,7 +6,7 @@ let name;
 export function userName() {
   // eslint-disable-next-line no-shadow
   console.log('Welcome to the Brain Games!')
-  name = readlineSync.question('May i have your name? ');
-  console.log(`Hello,  ${name}!`);
+  name = readlineSync.question('May I have your name? ');
+  console.log(`Hello,  ${name}`);
 }
 export { name };
