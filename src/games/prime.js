@@ -1,4 +1,4 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 // eslint-disable-next-line import/extensions, import/no-unresolved
 import { userName, name } from '../cli.js';
 
@@ -16,7 +16,7 @@ function isPrime(num) {
 }
 
 const playGamePrime = () => {
-  userName()
+  userName();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   let correctAnswers = 0;
@@ -41,6 +41,6 @@ const playGamePrime = () => {
   }
 
   console.log(`Congratulations, ${name}!`);
-}
+};
 
 export default playGamePrime;

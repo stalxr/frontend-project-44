@@ -1,25 +1,25 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 // eslint-disable-next-line import/no-unresolved
-import { userName, name } from "../cli.js";
+import { userName, name } from '../cli.js';
 // eslint-disable-next-line import/no-unresolved
-import randomNumber from "../utils/randomnum.js"
+import randomNumber from '../utils/randomnum.js';
 
 function generateArithmeticProgression() {
-  const length = randomNumber(5, 11)
+  const length = randomNumber(5, 11);
   const hiddenIndex = randomNumber(0, length - 1);
 
   let firstNumber = randomNumber(1);
-  const step = randomNumber(1, 11)
+  const step = randomNumber(1, 11);
   const progression = [];
 
   // eslint-disable-next-line no-plusplus
   for (let i = 1; i <= length; i++) {
-    progression.push(firstNumber)
-    firstNumber += step
+    progression.push(firstNumber);
+    firstNumber += step;
   }
-  const missingNumber = progression[hiddenIndex]
-  progression[hiddenIndex] = '..'
-  return { progression, missingNumber }
+  const missingNumber = progression[hiddenIndex];
+  progression[hiddenIndex] = '..';
+  return { progression, missingNumber };
 }
 
 const startGameProgression = () => {
@@ -47,6 +47,6 @@ const startGameProgression = () => {
   if (correctAnswers === 3) {
     console.log(`Congratulations, ${name}!`);
   }
-}
+};
 
 export default startGameProgression;

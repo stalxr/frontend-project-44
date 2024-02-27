@@ -6,11 +6,11 @@ import { userName, name } from "../cli.js";
 function randomCalc(operator, operand1, operand2) {
   // eslint-disable-next-line default-case
   switch (operator) {
-    case "+":
+    case '+':
       return operand1 + operand2;
-    case "-":
+    case '-':
       return operand1 - operand2;
-    case "*":
+    case '*':
       return operand1 * operand2;
   }
   return operator;
@@ -18,8 +18,8 @@ function randomCalc(operator, operand1, operand2) {
 
 const calculator = () => {
   userName();
-  console.log("What is the result of the expression?");
-  const operators = ["+", "-", "*"];
+  console.log('What is the result of the expression?');
+  const operators = ['+', '-', '*'];
   let correctAnswers = 0;
   const numOfQuestions = 3;
 
@@ -31,12 +31,12 @@ const calculator = () => {
     const question = `Question: ${operand1} ${operator} ${operand2}`;
     const correctAnswer = randomCalc(operator, operand1, operand2);
     let userAnswer = readlineSync.question(`${question}\nYour answer: `);
-    userAnswer = parseInt(userAnswer, 10) || userAnswer
+    userAnswer = parseInt(userAnswer, 10) || userAnswer;
 
     // eslint-disable-next-line radix
     if (userAnswer === correctAnswer) {
       // eslint-disable-next-line no-alert
-      console.log("Correct!");
+      console.log('Correct!');
       // eslint-disable-next-line no-plusplus
       correctAnswers++;
     } else {
@@ -52,5 +52,5 @@ const calculator = () => {
     // eslint-disable-next-line no-alert
     console.log(`Congratulations, ${name}!`);
   }
-}
+};
 export default calculator;

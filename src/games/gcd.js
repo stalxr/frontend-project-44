@@ -1,4 +1,4 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 // eslint-disable-next-line import/no-unresolved
 import { userName, name } from '../cli.js';
 
@@ -17,7 +17,7 @@ const gcd = (a, b) => {
 
 const playGameGcd = () => {
   userName();
-  console.log("Find the greatest common divisor of given numbers.");
+  console.log('Find the greatest common divisor of given numbers.');
 
   let correctAnswers = 0;
   const numQuestions = 3;
@@ -45,6 +45,6 @@ const playGameGcd = () => {
   if (correctAnswers === numQuestions) {
     console.log(`Congratulations, ${name}!`);
   }
-}
+};
 
 export default playGameGcd;
