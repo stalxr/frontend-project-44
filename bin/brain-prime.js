@@ -22,7 +22,7 @@ function playGame() {
 
   let correctAnswers = 0;
   while (correctAnswers < 3) {
-    const number = Math.floor(Math.random() * 100) + 1; // Генерируем случайное число от 1 до 100
+    const number = Math.floor(Math.random() * 100) + 1;
 
     console.log(`Question: ${number}`);
     const userAnswer = readlineSync.question('Your answer: ');
